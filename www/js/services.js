@@ -1,7 +1,7 @@
 angular.module('app.services', [])
   .factory('EverteamServices',function(){
-    // var _baseUrl = "http://192.168.1.217:8080/everteam/";
-    var _baseUrl = "/api/";
+    var _baseUrl = "http://192.168.1.217:8080/everteam/";
+    // var _baseUrl = "/api/";
     var service = {};
     var _token = {};
     var _taskId = '';

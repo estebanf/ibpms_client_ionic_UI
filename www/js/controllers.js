@@ -6,7 +6,7 @@ angular.module('app.controllers', [])
 function ($scope, $stateParams,ETApi,$ionicPopup,$state) {
   function clear(){
     $scope.data = {
-      user:'',
+      user:'admin',
       password:''
     }
   }
