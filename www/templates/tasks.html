@@ -1,0 +1,8 @@
+<ion-view title="Tasks" id="page7">
+    <ion-content padding="true" class="has-header">
+        <ion-refresher pulling-text="Pull to refresh" on-refresh="doRefresh()"></ion-refresher>
+        <ion-list id="tasks-list6">
+            <ion-item ng-repeat="task in tasks" ng-click="taskSelected(task)">{{task.description}}</ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

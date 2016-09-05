@@ -1,0 +1,24 @@
+<ion-view title="Start process" id="page6">
+    <ion-content padding="true" class="has-header">
+        <form id="startProcess-form4" class="list">
+            <label class="item item-input" id="startProcess-input6">
+                <span class="input-label">Amount</span>
+                <input type="text" placeholder="" ng-model="data.amount">
+            </label>
+            <label class="item item-select" id="startProcess-select2">
+                <span class="input-label">Reason</span>
+                <select ng-model="data.reason">
+                    <option>Project</option>
+                    <option>Office</option>
+                    <option>Customer</option>
+                    <option>Other</option>
+                </select>
+            </label>
+            <label class="item item-input" id="startProcess-textarea1">
+                <span class="input-label">Comments</span><textarea placeholder="" ng-model="data.comments"></textarea>
+            </label>
+            <ion-toggle toggle-class="toggle-positive" id="startProcess-toggle3" ng-model="data.urgent">Urgent</ion-toggle>
+        </form>
+        <button id="startProcess-button2" class="button button-positive  button-block" ng-click="submitProcess()">Submit for approval</button>
+    </ion-content>
+</ion-view>

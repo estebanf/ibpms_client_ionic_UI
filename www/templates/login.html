@@ -1,0 +1,15 @@
+<ion-view title="Login " id="page5" style="background-color:#;">
+    <ion-content padding="true" class="has-header">
+        <form id="login-form1" class="list">
+            <label class="item item-input" id="login-input2">
+                <span class="input-label">Username</span>
+                <input type="text" placeholder="" ng-model="data.user">
+            </label>
+            <label class="item item-input" id="login-input3">
+                <span class="input-label">Password</span>
+                <input type="password" placeholder="" ng-model="data.password">
+            </label>
+        </form>
+        <button id="login-button1" class="button button-positive  button-block" ng-click="authenticate()">Authenticate</button>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,30 @@
+<ion-view title="Task detail" id="page9">
+    <ion-content padding="true" class="has-header">
+        <div class="item item-divider">
+          Request ID
+        </div>
+        <a class="item" href="#">
+          {{task.requestid}}
+        </a>
+        <div class="item item-divider">
+          Requestor
+        </div>
+        <a class="item" href="#">
+          {{task.requestor}}
+        </a>
+        <div class="item item-divider">
+          Amount
+        </div>
+        <a class="item" href="#">
+          {{task.amount}}
+        </a>
+        <div class="item item-divider">
+          Reason
+        </div>
+        <a class="item" href="#">
+          {{task.reason}}
+        </a>
+        <button id="taskDetail-button3" class="button button-positive  button-block" ng-click="approve()">Approve</button>
+        <button id="taskDetail-button4" class="button button-assertive  button-block" ng-click="reject()">Reject</button>
+    </ion-content>
+</ion-view>
