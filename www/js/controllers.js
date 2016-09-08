@@ -82,14 +82,24 @@ function ($scope, $stateParams,ETApi,$ionicLoading,$ionicHistory) {
   $scope.show('Loading task...');
   ETApi.getTaskDetail()
     .then(function(data){
-      $scope.object = data["tms:getTaskResponse"]["tms:task"]["tms:input"]
-      $scope.task.amount = data["tms:getTaskResponse"]["tms:task"]["tms:input"].FormModel.Amount.$;
-      $scope.task.comments = data["tms:getTaskResponse"]["tms:task"]["tms:input"].FormModel.Comments.$;
-      $scope.task.reason = data["tms:getTaskResponse"]["tms:task"]["tms:input"].FormModel.Reason.$;
-      $scope.task.requestid = data["tms:getTaskResponse"]["tms:task"]["tms:input"].FormModel.RequestID.$;
-      $scope.task.date = data["tms:getTaskResponse"]["tms:task"]["tms:input"].FormModel.Request_date.$;
-      $scope.task.requestor = data["tms:getTaskResponse"]["tms:task"]["tms:input"].FormModel.Requestor.$;
-      $scope.task.urgent = data["tms:getTaskResponse"]["tms:task"]["tms:input"].FormModel.Urgent.$;
+      $scope.object = data['tms:getTaskResponse']['tms:task']['tms:input']
+      $scope.object.FormModel.Amount['@xmlns'] = { '$':''}
+      $scope.object.FormModel.Comments['@xmlns'] = { '$':''}
+      $scope.object.FormModel.Reason['@xmlns'] = { '$':''}
+      $scope.object.FormModel.RequestID['@xmlns'] = { '$':''}
+      $scope.object.FormModel.Request_date['@xmlns'] = { '$':''}
+      $scope.object.FormModel.Requestor['@xmlns'] = { '$':''}
+      $scope.object.FormModel.Urgent['@xmlns'] = { '$':''}
+      $scope.object.FormModel.Decision['@xmlns'] = { '$':''}
+      $scope.task.amount = $scope.object.FormModel.Amount.$;
+      $scope.task.comments = $scope.object.FormModel.Comments.$;
+      $scope.task.reason = $scope.object.FormModel.Reason.$;
+      $scope.task.requestid = $scope.object.FormModel.RequestID.$;
+      $scope.task.date = $scope.object.FormModel.Request_date.$;
+      $scope.task.requestor = $scope.object.FormModel.Requestor.$;
+      $scope.task.urgent = $scope.object.FormModel.Urgent.$;
+
+      console.log($scope.object);
       $scope.hide();
     })
   $scope.approve = function(){
